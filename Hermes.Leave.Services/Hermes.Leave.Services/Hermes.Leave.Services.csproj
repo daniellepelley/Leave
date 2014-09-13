@@ -45,8 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApprovalService.cs" />
+    <Compile Include="ILeavePolicy.cs" />
     <Compile Include="LeaveService.cs" />
+    <Compile Include="Model\LeaveCard.cs" />
     <Compile Include="Model\LeaveItem.cs" />
+    <Compile Include="Model\LeaveItemStatus.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
