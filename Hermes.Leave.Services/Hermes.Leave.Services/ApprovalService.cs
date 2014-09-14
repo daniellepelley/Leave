@@ -4,14 +4,27 @@ namespace Hermes.Leave.Services
 {
     public class ApprovalService
     {
+        private readonly IUser _user;
+
+        public ApprovalService(IUser user)
+        {
+            _user = user;
+        }
+
         public void Approve(LeaveItem leave)
         {
-            leave.Status = LeaveItemStatus.Approved;
+            if (_user.IsApprover)
+            {
+                leave.Status = LeaveItemStatus.Approved;
+            }
         }
 
         public void Reject(LeaveItem leave)
         {
-            leave.Status = LeaveItemStatus.Rejected;
+            if (_user.IsApprover)
+            {
+                leave.Status = LeaveItemStatus.Rejected;
+            }
         }
     }
 }
