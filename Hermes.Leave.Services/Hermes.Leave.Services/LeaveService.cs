@@ -6,7 +6,7 @@ using Hermes.Leave.Services.Model;
 
 namespace Hermes.Leave.Services
 {
-    public class LeaveService
+    public class LeaveService : ILeaveCardService, ILeaveForUserService
     {
         private readonly IRepository<LeaveItem> _repository;
         private readonly ILeavePolicy _leavePolicy;

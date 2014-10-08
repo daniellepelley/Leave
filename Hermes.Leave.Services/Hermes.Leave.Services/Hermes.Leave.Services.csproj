@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApprovalService.cs" />
+    <Compile Include="ILeaveCardService.cs" />
+    <Compile Include="ILeaveForUserService.cs" />
     <Compile Include="ILeavePolicy.cs" />
     <Compile Include="LeavePolicy.cs" />
     <Compile Include="Model\IUser.cs" />

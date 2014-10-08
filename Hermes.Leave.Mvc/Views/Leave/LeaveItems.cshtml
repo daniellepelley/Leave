@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Hermes.Leave.Services.Model.LeaveItem>
+@{
+    ViewBag.Title = "CurrentLeaveCard";
+}
+
+<h2>Leave Items</h2>
+
+@foreach (var leaveItem in Model)
+{
+    <div class="well well-sm">
+        <div>
+            Start: @leaveItem.StartDateTime
+        </div>
+        <div>
+            End: @leaveItem.EndDateTime
+        </div>
+        <div>
+            Status: @leaveItem.Status
+        </div>
+    </div>
+}
